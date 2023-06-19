@@ -170,7 +170,7 @@ const polybiusModule = (function () {
   function polybius(input, encode = true) {
     // decoding error handling
     if (encode === false) {
-      const noSpaces = input.replaceAll(" ", "");
+      const noSpaces = input.replace(/ /g, "");
       if (noSpaces.length % 2 !== 0) return false;
     }
 
